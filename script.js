@@ -41,13 +41,9 @@ requestAnimationFrame(animate);
 animate();
 
 
-/* SAFE PARALLAX (NO LAYOUT BREAK) */
+/* SAFE PARALLAX BACKGROUND */
 
 window.addEventListener("scroll", () => {
-
 let offset = window.scrollY * 0.15;
-
-document.body.style.backgroundPosition =
-`center ${offset}px`;
-
+document.body.style.backgroundPosition = `center ${offset}px`;
 });

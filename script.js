@@ -1,49 +1,53 @@
-/* ===== PARTICLE BACKGROUND ===== */
+function toggleMenu(){
+document.querySelector(".nav-links").classList.toggle("show");
+}
 
-const canvas = document.createElement("canvas")
-canvas.id="particles"
-document.body.appendChild(canvas)
+/* PARTICLES */
 
-const ctx = canvas.getContext("2d")
+const canvas=document.getElementById("particles");
+const ctx=canvas.getContext("2d");
 
-canvas.width = window.innerWidth
-canvas.height = window.innerHeight
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
 
-let particles=[]
+let particles=[];
 
-for(let i=0;i<70;i++){
+for(let i=0;i<50;i++){
 particles.push({
 x:Math.random()*canvas.width,
 y:Math.random()*canvas.height,
-vx:(Math.random()-0.5)*0.5,
-vy:(Math.random()-0.5)*0.5,
-size:Math.random()*2+1
-})
+r:Math.random()*2,
+dx:(Math.random()-.5)*0.4,
+dy:(Math.random()-.5)*0.4
+});
 }
 
 function animate(){
-
-ctx.clearRect(0,0,canvas.width,canvas.height)
+ctx.clearRect(0,0,canvas.width,canvas.height);
 
 particles.forEach(p=>{
-p.x+=p.vx
-p.y+=p.vy
+p.x+=p.dx;
+p.y+=p.dy;
 
-if(p.x<0||p.x>canvas.width) p.vx*=-1
-if(p.y<0||p.y>canvas.height) p.vy*=-1
+ctx.beginPath();
+ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+ctx.fillStyle="white";
+ctx.fill();
+});
 
-ctx.beginPath()
-ctx.arc(p.x,p.y,p.size,0,Math.PI*2)
-ctx.fillStyle="rgba(56,189,248,0.6)"
-ctx.fill()
-})
-
-requestAnimationFrame(animate)
+requestAnimationFrame(animate);
 }
+animate();
 
-animate()
 
-window.addEventListener("resize",()=>{
-canvas.width=window.innerWidth
-canvas.height=window.innerHeight
-})
+/* 3D PARALLAX SCROLL */
+
+window.addEventListener("scroll",()=>{
+
+document.querySelectorAll(".parallax-layer").forEach(layer=>{
+const depth = layer.dataset.depth;
+const movement = window.scrollY * depth;
+layer.style.transform = `translateZ(0) translateY(${movement}px)`;
+});
+
+});

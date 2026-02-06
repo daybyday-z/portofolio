@@ -12,13 +12,13 @@ canvas.height=window.innerHeight;
 
 let particles=[];
 
-for(let i=0;i<50;i++){
+for(let i=0;i<40;i++){
 particles.push({
 x:Math.random()*canvas.width,
 y:Math.random()*canvas.height,
 r:Math.random()*2,
-dx:(Math.random()-.5)*0.4,
-dy:(Math.random()-.5)*0.4
+dx:(Math.random()-.5)*0.3,
+dy:(Math.random()-.5)*0.3
 });
 }
 
@@ -37,17 +37,17 @@ ctx.fill();
 
 requestAnimationFrame(animate);
 }
+
 animate();
 
 
-/* 3D PARALLAX SCROLL */
+/* SAFE PARALLAX (NO LAYOUT BREAK) */
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
 
-document.querySelectorAll(".parallax-layer").forEach(layer=>{
-const depth = layer.dataset.depth;
-const movement = window.scrollY * depth;
-layer.style.transform = `translateZ(0) translateY(${movement}px)`;
-});
+let offset = window.scrollY * 0.15;
+
+document.body.style.backgroundPosition =
+`center ${offset}px`;
 
 });

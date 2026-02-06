@@ -1,40 +1,54 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Certificates</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<canvas id="particles"></canvas>
+
 <nav>
+<div class="logo">Certificates</div>
+
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+
+<div class="nav-links">
 <a href="index.html">Home</a>
 <a href="about.html">Profile</a>
 <a href="cert.html">Certificates</a>
+</div>
 </nav>
 
-<section class="panel">
 
-<h2>Certificates</h2>
+<section class="section">
 
-<div class="cert-grid">
+<h2>Sertifikat</h2>
 
-<a class="cert-card" href="stra.pdf" target="_blank">
-📄 STRA
-</a>
+<div class="card">
+<h3>POPCA 2025</h3>
+<embed src="popca.pdf" type="application/pdf" width="100%" height="400px">
+</div>
 
-<a class="cert-card" href="kompetensi.pdf" target="_blank">
-📄 Sertifikat Kompetensi
-</a>
+<div class="card">
+<h3>Sertifikat Kompetensi</h3>
+<embed src="kompetensi.pdf" type="application/pdf" width="100%" height="400px">
+</div>
 
-<a class="cert-card" href="popca.pdf" target="_blank">
-📄 POPCA 2025
-</a>
-
+<div class="card">
+<h3>STRA</h3>
+<embed src="stra.pdf" type="application/pdf" width="100%" height="400px">
 </div>
 
 </section>
 
+<footer>
+©Sofi Dwi 2026
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

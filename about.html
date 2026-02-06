@@ -1,68 +1,107 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Profile</title>
 <link rel="stylesheet" href="style.css">
-<script defer src="script.js"></script>
 </head>
 
 <body>
 
+<canvas id="particles"></canvas>
+
 <nav>
+<div class="logo">Profile</div>
+
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+
+<div class="nav-links">
 <a href="index.html">Home</a>
 <a href="about.html">Profile</a>
 <a href="cert.html">Certificates</a>
+</div>
 </nav>
 
-<section class="panel">
 
-<h2>Education</h2>
+<section class="section parallax-layer" data-depth="0.2">
 
-<div class="exp-card">
-<b>Pendidikan Profesi Apoteker</b><br>
-<small>2024 — 2025</small><br>
-Institut Ilmu Kesehatan Bhakti Wiyata Kediri — IPK 3.65
-</div>
+<h2>Profile Summary</h2>
 
-<div class="exp-card">
-<b>Sarjana Farmasi</b><br>
-<small>2019 — 2023</small><br>
-IPK 3.41
-</div>
-
-
-<h2>Experience</h2>
-
-<div class="timeline">
-
-<div class="exp-card">
-<b>RS Haji Surabaya</b><br>
-<small>Nov — Des 2024</small><br>
-Monitoring terapi, dispensing, edukasi obat
-</div>
-
-<div class="exp-card">
-<b>Kimia Farma</b><br>
-<small>Jan — Feb 2025</small><br>
-Dispensing resep & konseling pasien
-</div>
-
-<div class="exp-card">
-<b>PT Satoria Aneka Industri</b><br>
-<small>Mar — Apr 2025</small><br>
-Research & Development kemasan
-</div>
-
-<div class="exp-card">
-<b>Puskesmas Kediri</b><br>
-<small>Mei 2025</small><br>
-PIO, PROLANIS, layanan farmasi
-</div>
-
+<div class="card">
+Tenaga pelayanan kesehatan dengan fokus pada kualitas layanan pasien. Memiliki STR aktif serta sertifikat kompetensi dan POPCA. Berpengalaman dalam pelayanan farmasi, konseling pasien, serta kegiatan penelitian industri. Siap bekerja di klinik, apotek, maupun fasilitas pelayanan kesehatan lainnya.
 </div>
 
 </section>
 
+
+<section class="section parallax-layer" data-depth="0.4">
+
+<h2>Pengalaman Magang</h2>
+
+<div class="card">
+<strong>Rumah Sakit Haji Surabaya</strong><br>
+November – Desember 2024
+<ul>
+<li>Dispensing resep</li>
+<li>Konseling pasien</li>
+<li>Memantau terapi pengobatan pasien</li>
+<li>Pemberian informasi pengobatan</li>
+</ul>
+</div>
+
+<div class="card">
+<strong>Apotek Kimia Farma Ahmad Yani Surabaya</strong><br>
+Januari – Februari 2025
+<ul>
+<li>Konseling pasien</li>
+<li>Pelayanan informasi obat</li>
+<li>Pelayanan swamedikasi</li>
+</ul>
+</div>
+
+<div class="card">
+<strong>PT Satoria Aneka Industri</strong><br>
+Maret – April 2025
+<ul>
+<li>Bagian Research & Development</li>
+<li>Trial uji kesesuaian kemasan</li>
+<li>Uji kompatibilitas kemasan botol infus</li>
+<li>Uji fungsional kemasan</li>
+<li>Uji collapse kemasan botol</li>
+</ul>
+</div>
+
+<div class="card">
+<strong>Puskesmas Kota Wilayah Utara Kediri</strong><br>
+Mei 2025
+<ul>
+<li>Pemusnahan obat dan dokumen</li>
+<li>Pelayanan informasi obat</li>
+<li>Kegiatan PROLANIS</li>
+<li>Manajemen puskesmas</li>
+</ul>
+</div>
+
+</section>
+
+
+<section class="section parallax-layer" data-depth="0.6">
+
+<h2>Registrasi</h2>
+
+<div class="card">
+Nomor Registrasi:<br>
+BY00001960382964
+</div>
+
+</section>
+
+
+<footer>
+© 2026
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
